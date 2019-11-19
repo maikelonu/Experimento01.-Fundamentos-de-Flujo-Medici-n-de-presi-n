@@ -1,0 +1,7 @@
+Q= caudal (GPM)
+YB= manometro bourdon (kgf/cm2)
+XD= manometro digital (kgf/cm2)
+
+1 kgf/cm2 = 10 mca
+0.1 kgf/cm2 = 1 mca
+0.01 kgf/cm2 = 0.1 mca = 10 cm agua, cual es su meta?

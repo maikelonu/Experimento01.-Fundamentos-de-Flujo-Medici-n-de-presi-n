@@ -1,0 +1,27 @@
+# Accuracy:
+# Accuracy refers to the closeness of a measured value to a known value (or standard),
+# where 0 represents no agreement and 1 represents perfect agreement.
+#
+# Precision:
+# Precision refers to the closeness of two or more measurements to each other,
+# where 0 represents no agreement and 1 represents perfect agreement.
+# For example, if on average, your measurements for a given substance are close 
+# to the known value, but the measurements are far from each other, 
+# then you have accuracy without precision.
+#
+# Concordance Correlation Coefficient (CCC): 
+# The CCC can be written as the product of the accuracy and the 
+# precision coefficients. It measures the agreement along the identity line,
+# in which a value of 1 represents a perfect agreement, a value of -1 represents
+# a perfect disagreement and a value of 0 represents no agreement.
+#
+# Total Deviation Index (TDI) + Coverage probability (CP):
+# An intuitively clear measurement of agreement is a measure that captures
+# a large proportion of data within a predetermined boundary from target values.
+# For example, we may want to capture at least 90% of individual observations that are
+# within 10 mmHg of their target values (blood pressure). In other words, 
+# one can assume that the manual instrument can be replaced by the automatic
+# device if a large proportion of paired-measurement differences are within 
+# a boundary of 10 mmHg. The CP describes the proportion captured within a 
+# pre-specified boundary of the absolute paired-measurement differences from two devices.
+
