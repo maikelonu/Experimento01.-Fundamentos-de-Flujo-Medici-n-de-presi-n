@@ -68,6 +68,7 @@ round_df <- function(df, digits) {
 }
 
 # Agreement function source is loaded
+options(scipen=999)
 source("agreement_2020.R")
 
 # Input data is loaded and a data.frame is created
