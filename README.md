@@ -6,4 +6,3 @@ Se ejecutan mediciones de presion con diversos instrumentos {AP + HI + HC (GitHu
 # Ver Video de Agreement actualizado:
 
 https://www.youtube.com/watch?v=tWWeyhRTdH8
-
