@@ -20,6 +20,7 @@
 # Models, Issues, and Tools
 # Journal of the American Statistical Association. 
 # March 1, 2002, 97(457): 257-270.
+# https://math.tools/calculator/unit/pressure/
 
 # //////////////////////////////////////////////////////////////////////////////////
 # INFO
@@ -30,25 +31,27 @@
 # Correlacion_Pearson
 
 # //////////////////////////////////////////////////////////////////////////////////
-# Q= flow (GPM)
-# YB= bourdon gauge (kgf/cm2)
-# XD= digital gauge (kgf/cm2)
+# Q= flow (GPM). It does NOT participate in the calculations
+# YB = bourdon gauge (kgf/cm2). Brand = Winters. +/- 0.025 Bar or 0.25 PSI
+# XD = digital gauge (kgf/cm2). Brand = Cole-Parmer. +/- 0.1 mca
 
-# 1 kgf/cm2 = 10 mca
-# 0.1 kgf/cm2 = 1 mca
-# 0.01 kgf/cm2 = 0.1 mca = 10 cm water, 
-# As uncertainty for YB=  0.025 kgf/cm2 (25 cm water), what's your target???
-# Can we replace X with Y?
+# 1 kgf/cm2 = 10.0002753 mca
+# 0.09999 kgf/cm2 = 1 mca
+# 0.01 kgf/cm2 = 0.100002753 mca = 1.000028 cm-water
+# 1 psi =  0.7030696 mca
+# As uncertainty for YB=  0.025 Bar = 0.025493 kgf/cm2 (25.49 cm water),
+# or = 0.2549291 mca. Translated to PSI, it would be = 0.362594 PSI
+# So, what's your target? Can we replace X with Y?
 # //////////////////////////////////////////////////////////////////////////////////
 
 # Workspace is cleared
 rm(list = ls())
 
 # Working directory is selected
-setwd("/mnt/BACKUP/R_ITC/R_LABHYD/EXP_PRES")
+setwd("~/Dropbox/Academics/R_LAB/LABHYD_Exp_01_Medicion_Presion-master")
 
 # CRAN libraries are loaded
-require(Agreement)
+#require(Agreement)
 require(DescTools)
 require(ggplot2)
 require(MASS)
@@ -124,7 +127,7 @@ test1 <- agreement(x = df.base$XD,
                    error = "const",
                    target = "fixed",
                    CCC_a = 0.975, # no more of 2.5% should be accepted for instruments comparison
-                   TDI_a = 0.025, # an absolute difference when error="const" (units-interval)
+                   TDI_a = 0.025493, # an absolute difference when error="const" (units-interval)
                    alpha = 0.05, # 100(1-alpha)
                    CP_a = 0.90, # mirrored of TDI usually taken as 0.90 
                    H_label = "Digital Gauge",
